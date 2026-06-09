@@ -1,0 +1,76 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	font-family: Arial, sans-serif;
+  }
+  
+  svg {
+	width: 100%;
+	height: 100%;
+	animation: float 5s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+	0%, 100% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-10px);
+	}
+  }
+  
+  g #Cabeza path {
+	fill: #ff5733;
+	stroke: #900c3f;
+	stroke-width: 0.5;
+  }
+  
+  g #Aletas path {
+	fill: url(#LinearGradID_1);
+	stroke: #581845;
+	stroke-width: 0.5;
+  }
+  
+  g #Espina path:first-child {
+	fill: url(#LinearGradID_2);
+	stroke: #ffc300;
+	stroke-width: 0.2;
+  }
+  
+  g #Espina path:last-child {
+	fill: url(#LinearGradID_3);
+	stroke: #ff5733;
+	stroke-width: 0.2;
+  }
+  
+  /* Adding hover effects */
+  svg:hover g #Cabeza path {
+	fill: #ffc300;
+	stroke: #ff5733;
+	transition: fill 0.3s ease, stroke 0.3s ease;
+  }
+  
+  svg:hover g #Aletas path {
+	fill: #ff5733;
+	stroke: #c70039;
+	transition: fill 0.3s ease, stroke 0.3s ease;
+  }
+  
+  svg:hover g #Espina path:first-child {
+	fill: #900c3f;
+	stroke: #581845;
+	transition: fill 0.3s ease, stroke 0.3s ease;
+  }
+  
+  svg:hover g #Espina path:last-child {
+	fill: #581845;
+	stroke: #900c3f;
+	transition: fill 0.3s ease, stroke 0.3s ease;
+  }
+  
